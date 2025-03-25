@@ -1,0 +1,7 @@
+{
+  "name": "ow-Proyecto2-nostandalone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
