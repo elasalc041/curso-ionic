@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar >
+<!--no aparece este boton-->
+    <ion-buttons>
+      <ion-menu-button menu="menu1"></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-title>listaContactos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">listaContactos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-button color="success" (click)="openModal()">Lanzar Moadal</ion-button>
+  <ion-button (click)="onClickDetalle()">Ir al detalle</ion-button>
+</ion-content>

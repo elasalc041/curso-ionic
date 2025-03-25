@@ -15,6 +15,32 @@ export class AgendaPage implements OnInit {
   }
 
   ngOnInit() {
+    console.log("[ngOnit] agenda")
+  }
+
+  ionViewWillEnter() {
+    console.log("[ionViewWillEnter] agenda")
+  }
+
+  ionViewDidEnter() {
+    console.log("[ionViewDidEnter] agenda")
+  }
+
+  ionViewWillLeave() {
+    console.log("[ionViewWillLeave] agenda")
+  }
+
+  ionViewDidLeave() {
+    console.log("[ionViewDidLeave] agenda")
+  }
+
+  ngOnDestroy(){
+    console.log("[ngOnDestroy] agenda")
+  }
+
+  
+  pulsarNombre(nombre: any){
+    console.log(nombre);
   }
 
 }

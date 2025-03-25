@@ -1,3 +1,19 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!--Side menu en todas las páginas de la app-->
+  <ion-menu slot="start" mmenuId="menu1" contentId="main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Agenda</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-list>
+      <ion-menu-toggle>
+        <ion-item routerLink="/agenda/detalle-contacto">
+          <ion-label>Detalle</ion-label>
+        </ion-item>
+      </ion-menu-toggle>      
+    </ion-list>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

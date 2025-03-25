@@ -8,9 +8,13 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'agenda',
+    redirectTo: '/agenda',
     pathMatch: 'full'
-  }
+  },
+  {
+    path: 'mapa',
+    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>detalleContacto</ion-title>
+    <ion-buttons slot="primary">
+      <ion-icon name="close" slot="icon-only" routerLink="/agenda/listado" routerdDirection="back"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">detalleContacto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-button color="warning" (click)="onClickVolver()">Volver</ion-button>
+</ion-content>
