@@ -39,4 +39,8 @@ export class ListaContactosPage implements OnInit {
     });
   }
 
+  onEditarContacto(evento: string){
+    console.log(evento)
+  }
+
 }

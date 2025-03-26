@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Notas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Notas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="contenedor">
+    <ion-grid>
+      <ion-row>
+        <ion-col>1</ion-col>
+        <ion-col size="auto">2</ion-col>
+        <ion-col>3</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" size-md="4">1</ion-col>
+        <ion-col size="12" size-md="4">2</ion-col>
+        <ion-col size="12" size-md="4">3</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col offset="2">1</ion-col>
+        <ion-col>2</ion-col>
+        <ion-col offset="2">3</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="ion-text-center">
+    <h3>Título</h3>
+    <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+       Vel dolorum ex amet vitae commodi soluta, a omnis expedita? Minus aliquid recusandae pariatur 
+       aliquam dolorum expedita deserunt sint architecto? Aspernatur, consequatur.</p>
+  </div>
+
+  <div class="ion-text-justify">
+    <h3 class="ion-text-md-uppercase">Título</h3>
+    <p class="ion-padding ion-margin">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+       Vel dolorum ex amet vitae commodi soluta, a omnis expedita? Minus aliquid recusandae pariatur 
+       aliquam dolorum expedita deserunt sint architecto? Aspernatur, consequatur.</p>
+  </div>
+
+  <ion-button color="principal" (click)="toogleMostrar()">Mostrar/Ocultar</ion-button>
+<!--En este caso el valor de clase ion-hide, se asignará dependiendo del valor del boolean en el .ts-->
+  <div [ngClass]="{ 'ion-hide': variable_boolean }">
+    <h3>Título</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+       Vel dolorum ex amet vitae commodi soluta, a omnis expedita? Minus aliquid recusandae pariatur 
+       aliquam dolorum expedita deserunt sint architecto? Aspernatur, consequatur.</p>
+  </div>
+
+</ion-content>

@@ -7,13 +7,32 @@ const routes: Routes = [
     loadChildren: () => import('./agenda/agenda.module').then( m => m.AgendaPageModule)
   },
   {
-    path: '',
-    redirectTo: '/agenda',
-    pathMatch: 'full'
-  },
-  {
     path: 'mapa',
     loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
+    path: 'notas',
+    loadChildren: () => import('./notas/notas.module').then( m => m.NotasPageModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'listas',
+    loadChildren: () => import('./listas/listas.module').then( m => m.ListasPageModule)
+  },
+  {
+    path: 'action',
+    loadChildren: () => import('./action/action.module').then( m => m.ActionPageModule)
+  },
+  {
+    path: 'alert',
+    loadChildren: () => import('./alert/alert.module').then( m => m.AlertPageModule)
+  },
+  {
+    path: 'formulario',
+    loadChildren: () => import('./formulario/formulario.module').then( m => m.FormularioPageModule)
   },
 ];
 

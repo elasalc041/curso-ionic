@@ -11,6 +11,8 @@
     </ion-toolbar>
   </ion-header>  
   <a routerLink="/mapa">Ir a Mapa</a>
+
+
   <ion-list>    
       <ion-item *ngFor='let item of lista'>
         <ion-label (click)="pulsarNombre(item)">{{ item }}</ion-label> 
@@ -26,6 +28,10 @@
       <ion-tab-button tab="nuevo">
         <ion-label>Nuevo</ion-label>
         <ion-icon name="clipboard"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button routerLink="">
+        <ion-label>Home</ion-label>
+        <ion-icon name="home-outline"></ion-icon>
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>

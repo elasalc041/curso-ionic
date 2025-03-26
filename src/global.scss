@@ -35,3 +35,14 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+//principal
+.ion-color-principal {
+	--ion-color-base: var(--ion-color-principal);
+	--ion-color-base-rgb: var(--ion-color-principal-rgb);
+	--ion-color-contrast: var(--ion-color-principal-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-principal-contrast-rgb);
+	--ion-color-shade: var(--ion-color-principal-shade);
+	--ion-color-tint: var(--ion-color-principal-tint);
+}

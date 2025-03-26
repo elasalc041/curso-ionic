@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ListaContactosPageRoutingModule } from './lista-contactos-routing.module';
 
 import { ListaContactosPage } from './lista-contactos.page';
+import { CardComponent } from 'src/app/componentes/card/card.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ListaContactosPage } from './lista-contactos.page';
     IonicModule,
     ListaContactosPageRoutingModule
   ],
-  declarations: [ListaContactosPage]
+  declarations: [ListaContactosPage, CardComponent]
 })
 export class ListaContactosPageModule {}

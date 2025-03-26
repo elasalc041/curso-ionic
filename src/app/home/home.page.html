@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-text color="primary">
+    <h1>Título de la página</h1>
+  </ion-text>
+  <ion-button routerLink="/agenda">Agenda</ion-button>
+  <p>
+    Lorem <ion-text color="warning">ipsum dolor sit</ion-text>  amet, consectetur adipisicing elit. 
+    Facere harum voluptatem architecto 
+    error nobis veniam dignissimos ex cumque est rem, natus, voluptatibus 
+    fugit velit <ion-text color="secondary">hic odio quae</ion-text>  quidem autem voluptate?
+  </p>
+
+
+  <ion-list>
+    <ion-item *ngFor="let contacto of contactos">
+      <ion-label>
+        <h2> {{ contacto.nombre }} {{ contacto. apellidos }}</h2>
+        <p>Edad: {{ contacto.edad }}</p>
+      </ion-label>      
+    </ion-item>
+  </ion-list>
+</ion-content>

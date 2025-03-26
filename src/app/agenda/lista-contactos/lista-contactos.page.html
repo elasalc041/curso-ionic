@@ -18,4 +18,19 @@
 
   <ion-button color="success" (click)="openModal()">Lanzar Moadal</ion-button>
   <ion-button (click)="onClickDetalle()">Ir al detalle</ion-button>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <app-card nombre="Rocío" email="falso@email.com" tfno="6666666"
+        (editarContacto)="onEditarContacto($event)"></app-card>
+      </ion-col>
+      <ion-col>
+        <app-card nombre="Manuel" email="manuel@email.com" tfno="555555"
+        (editarContacto)="onEditarContacto($event)"></app-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
