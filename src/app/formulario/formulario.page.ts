@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { debounceTime } from 'rxjs';
+import { ProductosService } from '../servicios/productos.service';
 
 @Component({
   selector: 'app-formulario',
@@ -13,7 +14,12 @@ export class FormularioPage implements OnInit {
   //instanciar el formulario
   formulario: FormGroup;
 
-  constructor() { 
+  formulario2: FormGroup;
+
+  //introducir servicio creado
+  constructor(
+    private productoServicio: ProductosService
+  ) { 
     this.formulario = new FormGroup({
       nombre: new FormControl(null, [
         Validators.required
@@ -35,7 +41,16 @@ export class FormularioPage implements OnInit {
           Validators.required,
           //this.dniValidador
         ]
-      )
+      )      
+    });
+
+    this.formulario2 = new FormGroup({
+      name: new FormControl(),
+      description: new FormControl(),
+      price: new FormControl(),
+      category: new FormControl(),
+      image: new FormControl(),
+      active: new FormControl()   
     });
 
   }
@@ -56,6 +71,16 @@ export class FormularioPage implements OnInit {
     //formulario.valid devuelve booleano si los campos cumplen los validadores
     console.log(this.formulario.value);
   }
+
+  submitPOST(){
+    //console.log(this.formulario2.value)
+    this.productoServicio.createPOST(this.formulario2.value)
+      .subscribe(resp =>{
+        console.log(resp);
+      });
+  }
+
+
 
   checkError(control: string, error: string){
     return this.formulario.get(control)?.hasError(error) && 

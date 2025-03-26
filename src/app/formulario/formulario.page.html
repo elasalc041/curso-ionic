@@ -46,4 +46,34 @@
     </ion-item>
     <ion-button type="submit" class="ion-margin" [disabled]="!formulario.valid">Enviar</ion-button>
   </form>
+
+
+  <!--Formulario para realizar POST http-->
+  <form [formGroup]="formulario2" (ngSubmit)="submitPOST()">
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Descripción</ion-label>
+      <ion-input formControlName="description"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Precio</ion-label>
+      <ion-input formControlName="price"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Categoría</ion-label>
+      <ion-input formControlName="category"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Imagen</ion-label>
+      <ion-input formControlName="image"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Activo</ion-label>
+      <ion-checkbox slot="start" formControlName="active"></ion-checkbox>
+    </ion-item>
+    <ion-button type="submit">Enviar</ion-button>
+  </form>
 </ion-content>

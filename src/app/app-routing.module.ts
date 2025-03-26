@@ -34,6 +34,14 @@ const routes: Routes = [
     path: 'formulario',
     loadChildren: () => import('./formulario/formulario.module').then( m => m.FormularioPageModule)
   },
+  {
+    path: 'productos',
+    loadChildren: () => import('./productos/productos.module').then( m => m.ProductosPageModule)
+  },
+  {
+    path: 'editar/:productoId', //se añade para indicar que la ruta tiene una variable
+    loadChildren: () => import('./editar/editar.module').then( m => m.EditarPageModule)
+  },
 ];
 
 @NgModule({
